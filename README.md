@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a next js project created by nirbhayfr/github.
 
 ## Getting Started
 
 First, run the development server:
 
+installing dependencies
+
 ```bash
+npm install
+
+#run
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Filtering includes filtering the data fetched using react query based on minimum price, maximum price, photography styles, rating and place.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Three sorting methods are present, price: low to high , rating; high to low and recently added.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The search takes a string as an input and renders photographers if the keyword is found in the data so avoid using very common words like in, a, the etc.
 
-## Learn More
+The application is a mix of server side rendering and client side rendering but it is mostly using CSR because the project required a lot of re-renders based on state updates.
 
-To learn more about Next.js, take a look at the following resources:
+Tech Stack: Nextjs, Reactjs, React Icons, Redux js toolkit, Tailwind CSS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+There are not a lot of re-renders that affect the optimization of the page so there is no use of optimizing techniques in the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Could have used .env.local for the api url but it is just a dummy api so it has been left as it is for conserving time.
