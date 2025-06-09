@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { robotoCondensed } from "../layout";
 import Search from "./Search";
+import Loader from "../_ui/Loader";
 
 function Header() {
      return (
@@ -10,7 +12,9 @@ function Header() {
                     Pixisphere
                </h1>
                <div>
-                    <Search />
+                    <Suspense fallback={<Loader />}>
+                         <Search />
+                    </Suspense>
                </div>
                <p className="max-sm:hidden">Nirbhay</p>
           </header>

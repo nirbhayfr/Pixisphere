@@ -1,6 +1,8 @@
 "use client";
 
+import { Suspense } from "react";
 import Cards from "./Cards";
+import Loader from "../_ui/Loader";
 
 function page() {
      return (
@@ -9,7 +11,9 @@ function page() {
                     Explore Photographers
                </h2>
                <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1">
-                    <Cards />
+                    <Suspense fallback={<Loader />}>
+                         <Cards />
+                    </Suspense>
                </div>
           </div>
      );
